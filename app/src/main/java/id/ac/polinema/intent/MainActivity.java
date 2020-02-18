@@ -1,5 +1,6 @@
 package id.ac.polinema.intent;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
@@ -14,7 +15,16 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void handleExplicit(View view) {
-        Intent intent = new Intent(createPackageContext())
-                start
+        Intent intent = new Intent(  this, ExplicitIntentActivity.class);
+        startActivity(intent);
+    }
+
+    public void handleExit(View view) {
+        finish();
+    }
+
+    public void handleImplicit(View view) {
+        Intent intent = new Intent( this, ImplicitIntentActivity.class);
+        startActivity(intent);
     }
 }
